@@ -1,17 +1,17 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-// const cors = require('cors');
+const cors = require('cors');
 const app = express();
 const path = require('path');
 require("dotenv").config()
-require("./src/DB/connection")
+// require("./src/DB/connection")
 
 
-// app.use(bodyParser.urlencoded({ extended: true }))
-// app.use(bodyParser.json())
-// app.use(bodyParser.raw())
-// app.use(bodyParser.text())
-// app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+app.use(bodyParser.raw())
+app.use(bodyParser.text())
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // const userRouter = require("./src/Routes/user.routes");
 // const organizationRouter = require('./src/Routes/organization.routes');
