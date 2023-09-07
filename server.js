@@ -4,7 +4,7 @@ const cors = require('cors');
 const app = express();
 const path = require('path');
 require("dotenv").config()
-require("./src/DB/connection")
+// require("./src/DB/connection")
 
 
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -26,11 +26,11 @@ app.use(cors({
 app.get('/api/getuser' ,(req,res)=>{
     res.send({message:"hello saam",working:true})
 })
-app.use('/api/user', userRouter);
-app.use('/api/organization', organizationRouter);
-app.use('/api/department', departmentRouter);
-app.use('/api/admin/', adminRouter);
-app.use('/api/documents', documentRoutes);
+// app.use('/api/user', userRouter);
+// app.use('/api/organization', organizationRouter);
+// app.use('/api/department', departmentRouter);
+// app.use('/api/admin/', adminRouter);
+// app.use('/api/documents', documentRoutes);
 
 
 console.log(process.env.EMAIL_PASSWORD);
