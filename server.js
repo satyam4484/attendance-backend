@@ -19,9 +19,9 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 // const adminRouter = require("./src/Routes/admin.routes");
 // const documentRoutes = require('./src/Routes/document.routes');
 
-// app.use(cors({
-//     origin: '*'
-// }));
+app.use(cors({
+    origin: '*'
+}));
 
 app.get('/api/getuser' ,(req,res)=>{
     res.send({message:"hello saam",working:true})
