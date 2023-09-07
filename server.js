@@ -35,7 +35,7 @@ app.use('/api/documents', documentRoutes);
 
 console.log(process.env.EMAIL_PASSWORD);
 
-
+console.log(process.env.PORT)
 app.listen(8000, () => {
     console.log("listening to port 8000")
 })
