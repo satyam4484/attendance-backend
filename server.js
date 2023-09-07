@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const path = require('path');
 require("dotenv").config()
-// require("./src/DB/connection")
+require("./src/DB/connection")
 
 
 // app.use(bodyParser.urlencoded({ extended: true }))
